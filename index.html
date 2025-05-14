@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABG1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8M1mFLAAAAJXRSTlMAAQIDBAUGBwgJCgsMDQ4PEBESExQVFhcYGRobHB0eHyBvFMEAAACqSURBVBjTY2BgZGJhZWBmZ2BkYmBhZGVgYmNjZ2BgYAAIGZgFhBSDAwwMDgzODAwMDIwMjAw8DMwMDAwMMEABQyMEYBJQEGIpUQZxDlIQZmJ3AkTEGEMxEkIQJATInMhQBZAELGABGQZGhgcGhocHBkZGBgaGhgYGBkYmBgZGBgZGJhZGRgZmBgYmBgZGBgYGAQ2gAYAJIkQkMjoW3VAAAAAElFTkSuQmCC">
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kerge Kertsz</title>
+  <meta name="description" content="Kerge Kertész - Kertfenntartás, kertépítés, faápolás és szezonális kerti munkák megbízható szakembertől. Vállalkozás Pest megyében.">
+  <meta name="keywords" content="kertész, kertfenntartás, kertépítés, faápolás, gyepnyírás, szezonális munkák, pest megye, megbízható kertész">
+  <meta name="author" content="Kerge Kertész">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Segoe+UI&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+  .comparison-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 2rem auto;
+    border-radius: 10px;
+  }
+  .comparison-container img {
+    width: 100%;
+    display: block;
+  }
+  .comparison-wrapper {
+    position: relative;
+    display: flex;
+  }
+  .comparison-wrapper img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    clip-path: inset(0 50% 0 0);
+    transition: clip-path 0.2s ease;
+    z-index: 2;
+  }
+  .comparison-wrapper img:nth-child(1) {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .comparison-wrapper .handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #4b3e2b;
+    cursor: ew-resize;
+    z-index: 3;
+    transform: translateX(-50%);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #E6F5E6;
+    color: #2e2e1f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+  }
+  nav {
+    background-color: #d4c4a8;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  nav a {
+    background-color: #e3d5b8;
+    color: #4b3e2b;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  nav a:hover {
+    background-color: #cbb899;
+  }
+  
+    section {
+    background-color: #ffffff;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-image: url('https://www.transparenttextures.com/patterns/gplay.png');
+    background-repeat: repeat;
+    background-size: auto;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  h2 {
+    color: #5e4c36;
+    border-bottom: 2px solid #c1b19a;
+    padding-bottom: 0.5rem;
+  }
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    color: #2e2e1f;
+    font-size: 1rem;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #999;
+  }
+  button {
+    background-color: #4b3e2b;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: #3a2f20;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Kerge Kertész logó" class="logo" />
+    <h1 style="text-align: center;">Kerge Kertész</h1>
+    <p class="slogan" style="text-align: center; font-style: italic; max-width: 700px; margin: 0 auto 1.5rem auto;">Kertfenntartás, szezonális igényeknek megfelelően, képzett, tapasztalt szakember segítségével. Keressen bizalommal.</p>
+  </header>
+
+  <nav>
+    <a href="#rolam">Rólam</a>
+    <a href="#szolgaltatasok">Szolgáltatások</a>
+    <a href="#arlista">Árlista</a>
+    <a href="#galeria">Galéria</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+  </nav>
+
+  <main>
+    <section id="rolam">
+      <h2>Rólam</h2>
+      <p>Okleveles faápoló és kertész vagyok, sok éves tapasztalattal kültéri és beltéri zöldfelületek kialakításában és fenntartásában. Szakmai utam során egyaránt dolgoztam magánkertekben, közterületeken és intézményi zöldfelületeken. Vállalkozásomat azzal a céllal indítottam, hogy személyre szabott, megbízható és fenntartható megoldásokat kínáljak megrendelőim számára – legyen szó szezonális karbantartásról, új kertek kialakításáról vagy faápolási munkákról. Precizitás, figyelmesség és zöld szemlélet jellemzi munkámat.</p>
+    </section>
+
+    <section id="szolgaltatasok">
+      <h2>Szolgáltatások</h2>
+      <ul>
+        <li>Kertfenntartás</li>
+        <li>Kertépítés a tervezéstől az ápolásig</li>
+        <li>Gyepnyírás</li>
+        <li>Sövénytelepítés és sövénynyírás</li>
+        <li>Szezonális lombeltakarítás</li>
+        <li>Kerítésfestés</li>
+      </ul>
+    </section>
+
+    <section id="arlista">
+      <h2>Árlista</h2>
+      <ul>
+        <li>Gyepnyírás: 250–400 Ft/m²</li>
+        <li>Sövénynyírás: 1000–1500 Ft/fm</li>
+        <li>Faápolás, veszélyes fa kivágás: egyedi felmérés alapján</li>
+        <li>Lombeltakarítás: 200–350 Ft/m²</li>
+        <li>Kertfenntartási csomagok: 15.000 Ft-tól/hét</li>
+        <li>Kerítésfestés: 1800 Ft/m²</li>
+      </ul>
+      <p>*Az árak tájékoztató jellegűek, minden munka esetén egyedi árajánlat készül.</p>
+    </section>
+
+    <section id="galeria">
+      <h2>Galéria</h2>
+
+      <h3>Fűnyírás - Előtte / Utána</h3>
+      <div class="comparison-container">
+        <div class="comparison-wrapper" id="slider1">
+          <img src="fuv_utana.jpg" alt="Fűnyírás után">
+          <img src="fuv_elotte.jpg" alt="Fűnyírás előtt">
+          <div class="handle"></div>
+        </div>
+      </div>
+
+      <h3>Veszélyes fa kivágása - Előtte / Utána</h3>
+      <div class="comparison-container">
+        <div class="comparison-wrapper" id="slider2">
+          <img src="fa_utana.jpg" alt="Fa kivágás után">
+          <img src="fa_elotte.jpg" alt="Fa kivágás előtt">
+          <div class="handle"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kapcsolat">
+      <h2>Kapcsolat</h2>
+      <p>Email: <a href="mailto:kergekertesz@gmail.com">kergekertesz@gmail.com</a></p>
+      <form action="https://formspree.io/f/xdkgzaal" method="POST">
+        <label for="name">Név</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Üzenet</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Küldés</button>
+      </form>
+    </section>
+  </main>
+
+  <footer style="background-color: #eae4cf; color: #4b3e2b; text-align: center; padding: 1rem; margin-top: 2rem; font-size: 0.9rem;">
+    <p>&copy; 2025 Kerge Kertész</p>
+  </footer>
+
+  <script>
+    function initComparisonSlider(sliderId) {
+      const container = document.getElementById(sliderId);
+      const beforeImage = container.querySelector('img:nth-child(2)');
+      const handle = container.querySelector('.handle');
+
+      let isDragging = false;
+
+      const startDrag = () => (isDragging = true);
+      const stopDrag = () => (isDragging = false);
+
+      const doDrag = (e) => {
+        if (!isDragging) return;
+        const rect = container.getBoundingClientRect();
+        let offsetX = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+        offsetX = Math.max(0, Math.min(offsetX, rect.width));
+        const percentage = (offsetX / rect.width) * 100;
+        beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        handle.style.left = `${percentage}%`;
+      };
+
+      handle.addEventListener('mousedown', startDrag);
+      handle.addEventListener('touchstart', startDrag);
+      window.addEventListener('mouseup', stopDrag);
+      window.addEventListener('touchend', stopDrag);
+      window.addEventListener('mousemove', doDrag);
+      window.addEventListener('touchmove', doDrag);
+    }
+
+    initComparisonSlider("slider1");
+    initComparisonSlider("slider2");
+  </script>
