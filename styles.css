@@ -84,3 +84,26 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+
+.lb-overlay {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.lb-nav a.lb-prev,
+.lb-nav a.lb-next {
+  opacity: 0.8;
+}
+
+.lb-nav a.lb-prev:hover,
+.lb-nav a.lb-next:hover {
+  opacity: 1;
+}
+
+.lb-data .lb-number {
+  color: #e6f5e6;
+}
+
+.lb-data .lb-caption {
+  color: #fefefe;
+  font-size: 1rem;
+}
