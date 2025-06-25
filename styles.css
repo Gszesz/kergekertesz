@@ -84,6 +84,36 @@ footer {
   padding: 1rem;
   font-size: 0.9rem;
 }
+/* --- MOBIL HANGOLÁS (max 768px) --- */
+@media (max-width: 768px) {
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+
+  main section {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .gallery a img {
+    border-radius: 8px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+  }
+}
 
 .lb-overlay {
   background-color: rgba(0, 0, 0, 0.85) !important;
